@@ -17,6 +17,11 @@ public class WinnerState implements State {
     }
 
     @Override
+    public void choose(String color) {
+
+    }
+
+    @Override
     public void ejectQuarter() {
         System.out.println("Quarter returned");
         service.setState(service.getNoQuarterState());

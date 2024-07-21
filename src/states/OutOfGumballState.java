@@ -26,6 +26,11 @@ public class OutOfGumballState implements State {
     }
 
     @Override
+    public void choose(String color) {
+
+    }
+
+    @Override
     public void turnCrank() {
         System.out.println("You turned, but there are no gumballs");
     }
