@@ -8,6 +8,4 @@ public interface State {
     void turnCrank();
 
     void dispense();
-
-    void choose(String flavor);
 }

@@ -24,22 +24,20 @@ public class HasQuarterState implements State {
 
     @Override
     public void dispense() {
-        System.out.println("No gumball dispensed");
+        System.out.println("You need to turn crank first");
     }
 
     @Override
     public void turnCrank() {
-        System.out.println("You have to choose the flavor first");
-    }
+        System.out.println("You turned...");
+        int randInt = (int) Math.floor(Math.random() * 10);
 
-    @Override
-    public void choose(String flavor) {
-        if (!flavor.equals("Mango") && !flavor.equals("Orange")) {
-            System.out.println("There are no " + flavor + " flavor.");
+        if (randInt == 1 && service.getGumballAmount() >= 2) {
+            service.setState(service.getWinnerState());
             return;
         }
-        service.setGumballFlavor(flavor);
-        service.setState(service.getChooseFavorState());
-        System.out.println("You have chosen the flavor " + flavor);
+
+        service.setGumballAmount(service.getGumballAmount() - 1);
+        service.setState(service.getGumballSoldState());
     }
 }

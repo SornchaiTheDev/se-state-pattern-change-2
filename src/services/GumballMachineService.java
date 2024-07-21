@@ -5,14 +5,12 @@ import states.*;
 
 public class GumballMachineService {
     private int gumballAmount;
-    private String gumballFlavor;
     private State currentState;
     private State noQuarterState;
     private State hasQuarterState;
     private State gumballSoldState;
     private State outOfGumballState;
     private State winnerState;
-    private State chooseFavorState;
 
 
     public int getGumballAmount() {
@@ -46,13 +44,8 @@ public class GumballMachineService {
         this.gumballSoldState = new GumballSoldState(this);
         this.outOfGumballState = new OutOfGumballState(this);
         this.winnerState = new WinnerState(this);
-        this.chooseFavorState = new ChooseFavorState(this);
         this.currentState = noQuarterState;
 
-    }
-
-    public State getChooseFavorState() {
-        return chooseFavorState;
     }
 
     public void setState(State state) {
@@ -70,18 +63,6 @@ public class GumballMachineService {
     public void turnCrank() {
         currentState.turnCrank();
         currentState.dispense();
-    }
-
-    public void setGumballFlavor(String gumballFlavor) {
-        this.gumballFlavor = gumballFlavor;
-    }
-
-    public String getGumballFlavor() {
-        return gumballFlavor;
-    }
-
-    public void choose(String color) {
-        currentState.choose(color);
     }
 
     public void setGumballAmount(int gumballAmount) {
