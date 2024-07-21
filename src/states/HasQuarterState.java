@@ -33,9 +33,13 @@ public class HasQuarterState implements State {
     }
 
     @Override
-    public void choose(String color) {
-        service.setGumballColor(color);
+    public void choose(String flavor) {
+        if (!flavor.equals("Mango") && !flavor.equals("Orange")) {
+            System.out.println("There are no " + flavor + " flavor.");
+            return;
+        }
+        service.setGumballFlavor(flavor);
         service.setState(service.getChooseFavorState());
-        System.out.println("You have chosen the flavor " + color);
+        System.out.println("You have chosen the flavor " + flavor);
     }
 }

@@ -9,5 +9,5 @@ public interface State {
 
     void dispense();
 
-    void choose(String color);
+    void choose(String flavor);
 }

@@ -18,7 +18,7 @@ public class WinnerState implements State {
 
     @Override
     public void choose(String color) {
-
+        System.out.println("It's to late you already turn the crank!");
     }
 
     @Override
@@ -37,7 +37,7 @@ public class WinnerState implements State {
         service.setGumballAmount(service.getGumballAmount() - 2);
         System.out.println("YOU'RE A WINNER! You get two gumballs for your quarter");
         for (int i = 0; i < 2; i++) {
-            System.out.println("A gumball comes rolling out the slot...");
+            System.out.println("A "+ service.getGumballFlavor() +" gumball comes rolling out the slot...");
         }
 
         if (service.getGumballAmount() > 0) {

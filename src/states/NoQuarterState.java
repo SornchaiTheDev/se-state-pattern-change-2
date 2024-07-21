@@ -11,17 +11,12 @@ public class NoQuarterState implements State {
     }
 
     @Override
-    public void choose(String color) {
+    public void choose(String flavor) {
         System.out.println("You have to insert quarter first");
     }
 
     @Override
     public void insertQuarter() {
-        if (service.getGumballAmount() == 0) {
-            System.out.println("You can't insert a quarter, the machine is sold out");
-            return;
-        }
-
         System.out.println("You inserted a quarter");
         service.setState(service.getHasQuarterState());
     }

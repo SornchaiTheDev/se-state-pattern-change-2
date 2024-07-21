@@ -5,7 +5,7 @@ import states.*;
 
 public class GumballMachineService {
     private int gumballAmount;
-    private String gumballColor;
+    private String gumballFlavor;
     private State currentState;
     private State noQuarterState;
     private State hasQuarterState;
@@ -72,12 +72,12 @@ public class GumballMachineService {
         currentState.dispense();
     }
 
-    public void setGumballColor(String gumballColor) {
-        this.gumballColor = gumballColor;
+    public void setGumballFlavor(String gumballFlavor) {
+        this.gumballFlavor = gumballFlavor;
     }
 
-    public String getGumballColor() {
-        return gumballColor;
+    public String getGumballFlavor() {
+        return gumballFlavor;
     }
 
     public void choose(String color) {

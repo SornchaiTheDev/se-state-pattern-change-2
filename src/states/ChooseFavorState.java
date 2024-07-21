@@ -13,7 +13,7 @@ public class ChooseFavorState implements State {
 
     @Override
     public void insertQuarter() {
-        System.out.println("Already insert a quarter");
+        System.out.println("Already inserted a quarter");
     }
 
     @Override
@@ -23,9 +23,13 @@ public class ChooseFavorState implements State {
     }
 
     @Override
-    public void choose(String color) {
-        service.setGumballColor(color);
-        System.out.println("You have chosen the flavor " + color);
+    public void choose(String flavor) {
+        if (!flavor.equals("Mango") && !flavor.equals("Orange")) {
+            System.out.println("There are no " + flavor + "flavor.");
+            return;
+        }
+        service.setGumballFlavor(flavor);
+        System.out.println("You have chosen the flavor " + flavor);
     }
 
     @Override

@@ -27,7 +27,7 @@ public class GumballSoldState implements State {
 
     @Override
     public void dispense() {
-        System.out.println("A " + service.getGumballColor() + " gumball comes rolling out the slot");
+        System.out.println("A " + service.getGumballFlavor() + " gumball comes rolling out the slot");
         if (service.getGumballAmount() <= 0) {
             System.out.println("Oops, out of gumballs!");
             service.setState(service.getOutOfGumballState());
