@@ -29,7 +29,7 @@ public class OutOfGumballState implements State {
 
     @Override
     public void choose(String color) {
-
+        System.out.println("The machine is sold out. Come back later!");
     }
 
     @Override
