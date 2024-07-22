@@ -13,6 +13,11 @@ public class NoQuarterState implements State {
     }
 
     @Override
+    public void choose(String flavor) {
+        System.out.println("You have to insert quarter first");
+    }
+
+    @Override
     public void insertQuarter() {
         System.out.println("You inserted a quarter");
         service.setState(service.getHasQuarterState());

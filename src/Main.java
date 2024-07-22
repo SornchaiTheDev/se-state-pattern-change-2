@@ -7,20 +7,6 @@ public class Main {
         GumballMachineService service = new GumballMachineService(5);
 
         System.out.println(service);
-
-        service.insertQuarter();
-        service.turnCrank();
-
-        System.out.println(service);
-
-        service.insertQuarter();
-        service.ejectQuarter();
-        service.turnCrank();
-
-        System.out.println(service);
-
-        service.insertQuarter();
-        service.turnCrank();
         service.insertQuarter();
         service.turnCrank();
         service.ejectQuarter();
@@ -28,11 +14,8 @@ public class Main {
         System.out.println(service);
 
         service.insertQuarter();
-        service.insertQuarter();
-        service.turnCrank();
-        service.insertQuarter();
-        service.turnCrank();
-        service.insertQuarter();
+        service.choose("Mango");
+        service.choose("Orange");
         service.turnCrank();
 
         System.out.println(service);

@@ -29,7 +29,7 @@ public class GumballSoldState implements State {
 
     @Override
     public void dispense() {
-        System.out.println("A gumball comes rolling out the slot");
+        System.out.println("A " + service.getGumballFlavor() + " gumball comes rolling out the slot");
         if (service.getGumballAmount() <= 0) {
             System.out.println("Oops, out of gumballs!");
             service.setState(service.getOutOfGumballState());
@@ -37,4 +37,11 @@ public class GumballSoldState implements State {
         }
         service.setState(service.getNoQuarterState());
     }
+
+    @Override
+    public void choose(String color) {
+        System.out.println("It's to late you already turn the crank!");
+    }
+
+
 }
