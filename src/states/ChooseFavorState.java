@@ -20,7 +20,8 @@ public class ChooseFavorState implements State {
 
     @Override
     public void ejectQuarter() {
-        System.out.println("It's too late . You already turn the crank");
+        System.out.println("Quarter returned");
+        service.setState(service.getNoQuarterState());
     }
 
     @Override
