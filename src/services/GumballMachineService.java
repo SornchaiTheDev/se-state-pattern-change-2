@@ -99,8 +99,8 @@ public class GumballMachineService {
     @Override
     public String toString() {
         String status;
-        if (gumballAmount == 0) {
-            status = "Machine is sold out";
+        if (gumballAmount <= 0) {
+            status = "Machine is sold out\n";
         } else {
             status = "Machine is waiting for quarter\n";
         }
