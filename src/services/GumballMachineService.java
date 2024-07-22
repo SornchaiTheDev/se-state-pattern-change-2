@@ -49,7 +49,13 @@ public class GumballMachineService {
         this.outOfGumballState = new OutOfGumballState(this);
         this.winnerState = new WinnerState(this);
         this.chooseFavorState = new ChooseFavorState(this);
-        this.currentState = noQuarterState;
+
+        if(gumballAmount > 0) {
+            this.currentState = noQuarterState;
+        }
+        else {
+            this.currentState = outOfGumballState;
+        }
 
     }
 
