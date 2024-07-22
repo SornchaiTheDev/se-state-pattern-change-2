@@ -49,6 +49,6 @@ public class ChooseFavorState implements State {
 
     @Override
     public void dispense() {
-        System.out.println("You have to choose the flavor first");
+        System.out.println("Please wait for gumball to rolling out!");
     }
 }
